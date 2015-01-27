@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html ng-app="tienda">
+    <head>
+        <title>Hola Mundo Angular</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">    
+    </head>
+    <body>
+
+        <script src="js/angular.min.js"></script>
+        <script>
+                    (function(){
+                    var aplicacion = angular.module("tienda", []);
+                            aplicacion.controller("TiendaController", function(){
+                            this.producto = articulo;
+                            });
+                            var articulo = {
+                            nombre: "Mesa",
+                                    precio: 2347.99,
+                                    descripcion: "Soy una mesa!"
+                            };
+                    })();        </script>
+        <div ng-controller="TiendaController as tienda"> 
+            <h1> Nombre del Producto: {{tienda.producto.nombre}} </h1>
+            <h2> Precio del Producto: {{tienda.producto.precio}}</h2>
+            <h3> Descripción del Producto</h3>
+        </div>
+    </body>
+</html>
